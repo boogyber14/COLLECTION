@@ -10,7 +10,7 @@ use crossterm::event::{self, Event, KeyCode};
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let music_dir = PathBuf::from(r"C:\Users\Admin\Music");
 
-    // Collect all mp3 files into a playlist
+    
     let mut playlist: Vec<_> = fs::read_dir(&music_dir)?
         .filter_map(Result::ok)
         .map(|e| e.path())
