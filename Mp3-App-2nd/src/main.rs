@@ -57,7 +57,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
 
         if sink.empty() {
-            // Auto-play next song when current ends
+            
             current = (current + 1) % playlist.len();
             sink = play_song(&playlist[current], &stream_handle)?;
         }
