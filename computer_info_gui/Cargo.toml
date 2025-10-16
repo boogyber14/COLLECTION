@@ -1,0 +1,9 @@
+[package]
+name = "computer_info_gui"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eframe = "0.28"
+whoami = "1.5"
+md5 = "0.7"
