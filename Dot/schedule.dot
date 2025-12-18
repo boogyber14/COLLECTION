@@ -1,0 +1,6 @@
+
+digraph Schedule {
+    Input -> Movement;
+    Movement -> Physics;
+    Physics -> Rendering;
+}

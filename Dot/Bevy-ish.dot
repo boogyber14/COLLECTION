@@ -1,0 +1,38 @@
+digraph BevySchedule {
+    rankdir=LR;
+    node [shape=box, style="rounded,filled", fillcolor=lightgray];
+    edge [color=gray40];
+
+    subgraph cluster_logic {
+    label = "Game Logic";
+    style = dashed;
+
+    Input;
+    AI;
+    Movement;
+    }
+
+    subgraph cluster_physics {
+    label = "Physics";
+    style = dashed;
+
+    Physics;
+    Collision;
+    }
+
+    subgraph cluster_render {
+    label = "Rendering";
+    style = dashed;
+
+    Animation;
+    Rendering;
+    }
+
+    Input -> AI      [label="after input"];
+    Input -> Movement;
+    AI -> Movement   [label="AI decision"];
+    Movement -> Physics;
+    Physics -> Collision;
+    Collision -> Animation;
+    Animation -> Rendering;
+}
