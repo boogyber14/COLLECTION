@@ -17,7 +17,7 @@ fn main() {
 fn setup(mut commands: Commands) {
     commands.spawn(Camera2d);
 
-    // Player
+    
     commands.spawn((
         Sprite {
             color: Color::srgb(0.2, 0.7, 0.9),
@@ -28,7 +28,7 @@ fn setup(mut commands: Commands) {
         Player,
     ));
 
-    // Enemy
+    
     commands.spawn((
         Sprite {
             color: Color::srgb(0.9, 0.2, 0.2),
